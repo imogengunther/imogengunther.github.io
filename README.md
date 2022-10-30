@@ -35,6 +35,15 @@ and thumbnail generation__. So if you're lazy like me then you can just do the f
 5. Run `$ gulp` to resize the images and to generate thumbnails automatically
 6. Push your changes to github.com by `$ git add --all` and `$ git commit -m "a nice commit message"` and then finally `$ git push origin master`
 
+## Adding new photos
+
+1. Open PowerShell as administrator
+2. Enter `bash` to enter WSL
+3. Navigate to images folder `cd imogengunther.github.io/images/fulls`
+4. Copy the photos you want to add into the images folder like so `cp -a /mnt/d/...image-location/. ./`
+5. Create the thumbnails like so `mogrify -resize 512x512 -quality 100 -path ../thumbs *
+6. Push the images to github `git add --all` `git commit -m "Add some new images"` `git push`
+
 ### Contact Form
 You can make the contact form work without the need of any server-side code. Just follow this [article on github](https://github.com/dwyl/html-form-send-email-via-google-script-without-server) which uses a simple google script to send emails or to upload to a google spreadsheet when someone submits the form.
 
